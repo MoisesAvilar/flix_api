@@ -20,16 +20,21 @@ ALLOWED_HOSTS = ['*']
 
 # Application definition
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+]
 
+MY_APPS = [
+    # DRF
     'rest_framework',
     'rest_framework_simplejwt',
+
+    # Custom Apps
 
     'actors',
     'authentication',
@@ -37,6 +42,8 @@ INSTALLED_APPS = [
     'movies',
     'reviews',
 ]
+
+INSTALLED_APPS = DJANGO_APPS + MY_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
